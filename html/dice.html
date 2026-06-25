@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dado 3D</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        perspective: 600px;
+        perspective-origin: center center;
+        background: cadetblue;
+    }
+
+    .cube {
+        position: absolute;
+        top: 1em;
+        bottom: 1em;
+        left: 1em;
+        right: 1em;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        transform-style: preserve-3d;
+        animation: rotate 5s linear infinite;
+    }
+
+    .side {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        overflow: hidden;
+        background: rgb(150, 255, 255, 0.2);
+        border: 2px solid #fff;
+        border-radius: 10%;
+    }
+
+    .first {
+        transform: translateZ(-100px);
+    }
+
+    .second {
+        transform: translateY(-100px) rotateX(90deg);
+    }
+
+    .third {
+        transform: translateY(100px) rotateX(90deg);
+    }
+
+    .fourth {
+        transform: translateX(-100px) rotateY(90deg);
+    }
+
+    .fifth {
+        transform: translateX(100px) rotateY(90deg);
+    }
+
+    .sixth {
+        transform: translateZ(100px);
+    }
+
+    .side span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
+        background: #fff;
+        opacity: 0.8;
+        font-size: 5rem;
+        font-weight: bolder;
+    }
+
+    .second span {
+        background-color: #f0ea60;
+    }
+
+    .third span {
+        background-color: #ee6352;
+    }
+
+    .fourth span {
+        background-color: #4f7cac;
+    }
+
+    .fifth span {
+        background-color: #45bf84;
+    }
+
+    .sixth span {
+        background-color: #e5a532;
+    }
+
+    @keyframes rotate {
+        to {
+            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        }
+    }
+</style>
+
+<body>
+    <div class="cube">
+        <div class="first side"><span>1</span></div>
+        <div class="second side"><span>2</span></div>
+        <div class="third side"><span>3</span></div>
+        <div class="fourth side"><span>4</span></div>
+        <div class="fifth side"><span>5</span></div>
+        <div class="sixth side"><span>6</span></div>
+    </div>
+</body>
+
+</html>
