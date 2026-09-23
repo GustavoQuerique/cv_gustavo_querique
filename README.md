@@ -28,7 +28,8 @@ Entre os projetos exibidos na página estão:
 - Dado 3D
 - Mais 5 Minutinhos
 
-A seção de projetos apresenta alguns dos trabalhos desenvolvidos durante meus estudos. :contentReference[oaicite:1]{index=1}
+A seção de projetos apresenta alguns dos trabalhos desenvolvidos durante meus estudos.
+
 
 ##  Como visualizar
 
